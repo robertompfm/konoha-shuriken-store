@@ -3,7 +3,7 @@ Website of a fictional shuriken store
 
 I am building this website to practice my CSS and SCSS skills. 
 I originally made this website as one of FreeCodeCamp projects and now I am slowly improving it.
-The last improvements were making an animation for the logo. 
+The last improvement was making an animation for the logo. 
 I have also just started to make the project in SCSS instead of just CSS.
 
 ### Animation
