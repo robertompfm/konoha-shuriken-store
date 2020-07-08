@@ -1,0 +1,311 @@
+/*
+    font-family: 'Cinzel', serif;
+
+    font-family: 'Francois One', sans-serif;
+
+    font-family: 'Permanent Marker', cursive;
+
+    img {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   }
+*/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(241, 220, 197, 0.97), rgba(241, 219, 196, 0.97)), url(../Images/shinobi.png);
+  background-repeat: no-repeat;
+  background-position-x: 55%;
+  background-attachment: fixed; }
+
+.nav-bar {
+  background-color: #444;
+  color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; }
+
+.nav-logo {
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  padding: 1rem; }
+
+.small-shuriken {
+  height: 3.5rem;
+  -webkit-filter: invert(1);
+  filter: invert(1); }
+
+.mini-logo-name {
+  margin-left: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 800; }
+
+.options {
+  opacity: 0.9; }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none; }
+
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 400;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  vertical-align: middle;
+  text-align: center; }
+
+.nav-link:hover {
+  background: #6a6a6a; }
+
+.home {
+  height: 95vh;
+  margin-top: 5vh;
+  background-size: contain;
+  position: relative; }
+
+.home__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+  /* used to prevent a "shaking" on the animation */ }
+
+.home__welcome {
+  font-size: 1.5rem;
+  /**/
+  font-weight: 100;
+  letter-spacing: .5rem;
+  color: #444;
+  animation: welcomeAnimation 1.5s ease-in 1.5s;
+  animation-fill-mode: backwards;
+  /*makes it invisible at the begining*/ }
+
+@keyframes welcomeAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.home__name {
+  font-size: 2.8rem;
+  font-weight: 900;
+  position: relative;
+  animation: moveInLeft 1.5s ease-in-out 4s;
+  animation-fill-mode: backwards; }
+
+.home__image {
+  margin: 2rem;
+  animation: shurikenAnimation 1s ease-out 3s;
+  animation-fill-mode: backwards; }
+
+@keyframes shurikenAnimation {
+  0% {
+    transform: translateX(350%) rotate(20rad);
+    opacity: 0; }
+  100% {
+    transform: translateX(0%); } }
+
+.home__shuriken {
+  height: 8rem; }
+
+.home__logo--sub {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #444;
+  width: 80%;
+  animation: moveInRight 1.5s ease-in-out 4s;
+  animation-fill-mode: backwards; }
+
+.home__name::after {
+  content: "Konoha Shuriken Store";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.home__logo--sub::after {
+  content: "the best Shuriken and Kunai Store of the whole Land of Fire!";
+  display: inline-block;
+  color: #444;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  50% {
+    transform: translateX(3rem);
+    opacity: 0.2; }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  50% {
+    transform: translateX(-3rem);
+    opacity: 0.2; }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@keyframes ghostAnimation {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.5; }
+  100% {
+    transform: scaleX(1.5) scaleY(1.2);
+    opacity: 0; } }
+
+.ghost::after {
+  animation: ghostAnimation 1s 5s; }
+
+section {
+  padding-bottom: 3rem; }
+
+.section-title {
+  font-size: 2.5rem;
+  border-top: 2px solid;
+  margin: 0 20% 2rem 20%;
+  padding: 2.5rem 0 1rem 0; }
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem; }
+
+.icon {
+  align-items: center;
+  justify-content: center;
+  height: 12.5rem;
+  width: 12.5rem; }
+
+#shuriken {
+  margin: 2.5rem;
+  text-align: left;
+  width: 65%; }
+
+#kunai,
+#elite-shuriken {
+  margin: 3rem;
+  text-align: left;
+  width: 50%; }
+
+.rightTab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%; }
+
+.product-title {
+  margin: 0 2rem;
+  text-align: left;
+  font-size: 2rem; }
+
+.product-subtitle {
+  margin: 0 2rem;
+  padding: 0;
+  text-align: left;
+  font-size: 1.5rem; }
+
+.st-subtitle {
+  margin: 0 20% 1rem 20%;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.video-frame {
+  margin: 1rem; }
+
+.cell {
+  height: 25%;
+  width: 100%;
+  border-bottom: 1px solid #444;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.7rem; }
+
+.cell-title {
+  background-color: #444;
+  color: #FFF; }
+
+.cell-s {
+  border: 1px solid #777;
+  color: #444; }
+
+.cell-title-s {
+  border: none; }
+
+.flex-col {
+  font-size: 1.4rem;
+  width: 20%;
+  height: 25rem;
+  border: 2px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.flex-col-s {
+  border: none; }
+
+.flex-row {
+  margin: 2.5rem 25%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+@media (max-width: 950px) {
+  html {
+    font-size: 55%; } }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 45%; } }
+
+@media (max-width: 700px) {
+  html {
+    font-size: 35%; } }
